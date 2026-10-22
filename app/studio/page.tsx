@@ -1,3 +1,3 @@
-import {readings} from '../../lib/content';
-export const metadata={title:'Conoscere. Praticare. Continuare a crescere. — Studio Nichiren'};
-export default function Page(){return <section className="reading-index"><span className="eyebrow">STUDIO NICHIREN · STUDIO</span><h1>Conoscere. Praticare. Continuare a crescere.</h1><p>Un percorso tra Nichiren, i testi e le domande della vita. Tutte le letture restano qui, nel tuo portale.</p><div className="reading-cards">{readings.map((r,i)=><a href={'/insegnamenti/'+r.slug} key={r.slug}><small>0{i+1} / {r.tag}</small><h2>{r.title}</h2><p>{r.intro}</p><strong>Apri la lettura ↗</strong></a>)}</div><p>Contenuti editoriali originali, non riproduzioni delle traduzioni integrali.</p></section>}
+import Catalog from '../../components/catalog';
+export const metadata={title:'Studio e pratica — Studio Nichiren'};
+export default function Page(){return <Catalog/>}

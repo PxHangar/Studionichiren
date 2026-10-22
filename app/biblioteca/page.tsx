@@ -1,3 +1,3 @@
-import {readings} from '../../lib/content';
-export const metadata={title:'Le parole aprono nuovi orizzonti. — Studio Nichiren'};
-export default function Page(){return <section className="reading-index"><span className="eyebrow">STUDIO NICHIREN · BIBLIOTECA</span><h1>Le parole aprono nuovi orizzonti.</h1><p>Guide originali per orientarti nei testi e costruire il tuo quaderno di studio. Tutte le letture restano qui, nel tuo portale.</p><div className="reading-cards">{readings.map((r,i)=><a href={'/insegnamenti/'+r.slug} key={r.slug}><small>0{i+1} / {r.tag}</small><h2>{r.title}</h2><p>{r.intro}</p><strong>Apri la lettura ↗</strong></a>)}</div><p>Contenuti editoriali originali, non riproduzioni delle traduzioni integrali.</p></section>}
+import Catalog from '../../components/catalog';
+export const metadata={title:'Biblioteca: le parole aprono nuovi orizzonti — Studio Nichiren'};
+export default function Page(){return <Catalog library/>}
