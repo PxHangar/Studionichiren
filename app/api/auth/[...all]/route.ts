@@ -1,3 +1,4 @@
+import {publicNameError} from '../../../../lib/public-name';
 import {createRequestClient} from '../../../../lib/supabase/server';
 export const dynamic='force-dynamic';
 export async function GET(request:Request){const {client,json}=createRequestClient(request);const action=new URL(request.url).pathname.slice('/api/auth/'.length);if(action==='ok')return json({status:'ok',provider:'supabase'});if(action==='get-session'){const {data:{user}}=await client.auth.getUser();return json(user?{user:{id:user.id,name:user.user_metadata?.name||'Partecipante',email:user.email}}:null)}return json({error:'Pagina non trovata'},404)}
@@ -7,6 +8,7 @@ export async function POST(request:Request){const {client,json}=createRequestCli
  if(action==='sign-up/email'){
   const email=typeof b.email==='string'?b.email.trim():'';const name=typeof b.name==='string'?b.name.trim():'';
   if(!email||name.length<2||name.length>60||typeof b.password!=='string'||b.password.length<12||b.password.length>128)return json({error:'Controlla nome, email e password (almeno 12 caratteri).'},400);
+  const nameIssue=publicNameError(name);if(nameIssue)return json({error:nameIssue},400);
   const {data,error}=await client.auth.signUp({email,password:b.password,options:{data:{name},emailRedirectTo:origin+'/auth/callback?next=/community'}});
   if(error)return json({error:'Registrazione non riuscita. Controlla i dati o riprova tra poco.'},error.status===429?429:400);
   if(data.session&&data.user)await client.from('profiles').update({display_name:name}).eq('id',data.user.id);
