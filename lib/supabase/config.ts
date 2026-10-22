@@ -1,0 +1,1 @@
+export const supabaseConfig={url:process.env.NEXT_PUBLIC_SUPABASE_URL||'https://aoxfwzqcrzquyminqtok.supabase.co',key:process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY||process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY||"sb_publishable_fKiXiyADXjw6qn_v2zaKJA_yu1zy2e-"};

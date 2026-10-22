@@ -1,4 +1,10 @@
-node_modules
-.next
-.env*.local
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+.outputs/
 .vercel
+
+supabase/.temp/

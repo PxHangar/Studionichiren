@@ -1,3 +1,5 @@
-import './globals.css';import Link from 'next/link';
-export const metadata={title:'Studio Nichiren | Sutra del Loto e comunità',description:'Percorsi di studio, approfondimenti e comunità dedicati al Sutra del Loto e agli insegnamenti di Nichiren Daishonin.'};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="it"><body><header><Link className="brand" href="/">✺ Studio Nichiren</Link><nav><Link href="/studio">Studia</Link><Link href="/biblioteca">Biblioteca</Link><Link href="/community">Community</Link><Link href="/eventi">Incontri</Link></nav></header><main>{children}</main><footer>Studio Nichiren · Progetto di studio indipendente · Contenuti introduttivi, non attribuiti a organizzazioni ufficiali</footer></body></html>}
+import type { Metadata } from "next";
+import "./globals.css";
+import Experience from "../components/experience";
+export const metadata: Metadata = { title: "Studio Nichiren — Il valore di ogni vita", description: "Uno spazio indipendente per esplorare gli insegnamenti di Nichiren: studio, pratica e dialogo.", icons: {icon:"/favicon.svg"}};
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="it"><body>{children}<Experience/></body></html>}
