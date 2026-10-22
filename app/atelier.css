@@ -11,3 +11,4 @@
 /* Isolate footer columns from the community's legacy footer flex rules. */
 .sn-site footer.sn-footer{grid-template-columns:minmax(0,1.8fr) repeat(3,minmax(0,1fr))}.sn-site footer.sn-footer>div{display:block;min-width:0}.sn-site footer.sn-footer>.sn-footer-bottom{display:flex;min-width:0}.sn-site footer.sn-footer a,.sn-site footer.sn-footer p{overflow-wrap:anywhere}
 @media(max-width:760px){.sn-site footer.sn-footer{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sn-site a.btn.primary,.sn-site a.btn.dark{color:#fff}
