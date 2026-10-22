@@ -1,0 +1,13 @@
+.section{padding:18px 22px 75px;background:#f5f3eb}
+.inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:8%;align-items:center;padding:clamp(35px,5vw,75px);border-radius:8px;background:#e5e9df;color:#203e36}
+.eyebrow{display:block;font-size:12px;letter-spacing:2.2px;font-weight:700;color:#8d6542;margin-bottom:22px}
+.main h2{font-family:'Manrope',sans-serif;font-size:clamp(32px,4vw,53px);line-height:1.17;letter-spacing:-1.7px;font-weight:500;margin:0 0 23px}
+.main h2 em{color:#95704c}
+.main p{max-width:650px;font-size:15px;line-height:1.9;color:#4a6057}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:27px}
+.links a{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;padding-bottom:5px;border-bottom:1px solid currentColor}
+.aside{display:grid;gap:15px}
+.aside>div{display:flex;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid #bbcabc;font-size:15px;line-height:1.55}
+.aside>div svg{flex:none;color:#95704c}
+@media(max-width:800px){.inner{grid-template-columns:1fr;gap:23px;padding:35px 27px}.section{padding:10px 14px 60px}.aside{gap:5px}}
+@media(max-width:540px){.inner{padding:30px 24px}.aside>div{padding:15px 0;font-size:14px}.links{gap:16px}}
