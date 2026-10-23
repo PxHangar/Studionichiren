@@ -13,7 +13,7 @@
 @media(max-width:760px){.sn-site footer.sn-footer{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .sn-site a.btn.primary,.sn-site a.btn.dark{color:#fff}
 
-/* Studio Nichiren signature: open circle, lotus and editorial wordmark. */
+/* Studio Nichiren signature: custom N, open pages and editorial wordmark. */
 .sn-brand.sn-logo{display:inline-flex;align-items:center;gap:12px;flex-shrink:0;color:#102d47;text-decoration:none;white-space:nowrap}
 .sn-brand.sn-logo>.sn-logo-mark{display:block;width:60px;height:60px;flex:0 0 60px;border-radius:0;background:none;padding:0}
 .sn-brand.sn-logo>.sn-logo-wordmark{display:flex;flex-direction:column;align-items:flex-start;gap:0;font-size:initial;font-weight:400;letter-spacing:normal;line-height:1}
